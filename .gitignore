@@ -1,0 +1,29 @@
+# Exclude Layers
+
+# BitBake and OpenEmbedded-Core
+
+bitbake/
+openembedded-core/
+
+# Vendor Layers
+
+meta-arm/
+meta-ti/
+
+meta-yocto/
+
+# Exclude Build Directories
+
+build/
+
+# Exclude Filetypes
+
+*.pyc
+*.pyo
+
+*.swp
+*.orig
+*.rej
+
+
+

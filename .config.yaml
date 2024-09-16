@@ -1,0 +1,48 @@
+header:
+  version: 11
+
+machine: beaglebone-yocto
+distro: bbb-distro
+target:
+  - bbb-distro-image
+
+repos:
+  bitbake:
+    url: 'https://git.openembedded.org/bitbake'
+    branch: '2.0'
+    layers:
+      .: excluded
+
+  openembedded-core:
+    url: 'https://git.openembedded.org/openembedded-core'
+    branch: kirkstone
+    layers:
+      meta: null
+      meta-skeleton:  null
+      metal-selftest: null
+
+  meta-yocto:
+    url: 'git://git.yoctoproject.org/meta-yocto'
+    branch: kirkstone
+    layers:
+      meta-yocto-bsp: null
+
+  meta-arm:
+    url: 'git://git.yoctoproject.org/meta-arm'
+    branch: kirkstone
+    layers:
+      meta-arm-toolchain: null
+      meta-arm: null
+
+  meta-ti:
+    url: 'https://git.yoctoproject.org/meta-ti'
+    branch: kirkstone
+    layers:
+      meta-ti-bsp: null
+ 
+  meta-bbb:
+    layers:
+      meta-bbb: null
+
+  local_conf_header:
+    meta-bbb: null
