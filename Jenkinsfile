@@ -30,28 +30,4 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            steps {
-                
-                /* Email Notification with oe-build-perf-report contents */
-                
-                /* Email Notification with QEMU / LAVA report summary */
-
-                echo "Success"
-
-            }
-        }
-        failure {
-            steps {
-                
-                /* Email Notification with BitBake error logs */
-                
-                /* Email Notification with QEMU / LAVA error logs */
-            
-                echo "Failure"
-
-            }
-        }
-    }
 }
