@@ -14,36 +14,56 @@ pipeline {
     
         stage("Build Assesement") {
     
-            echo "Executing Build ${BUILD_TAG} with URL: ${BUILD_URL}"
+            steps {
+
+                echo "Executing Build ${BUILD_TAG} with URL: ${BUILD_URL}"
     
-            echo "Hello World!"
+                echo "Hello World!"
+
+            }        
     
         }
         stage("Build") {
             
-            echo "Build"
+            steps {
+                
+                echo "Build"
+            
+            }
         
         }
 
         stage("Staging") {
                 
+            steps {
+
             withCredentials([
                 usernamePassword(credentials: Global, usernameVariable: USER, passwordVariable: PWD)
             ]) {
                 echo "Staging"
+            }
+
             }
         
         }
         
         stage("Test") {
         
-            echo "Test"
+            steps {
+                
+                echo "Test"
+            
+            }
         
         }
         
         stage("Deploy") {
         
-            echo "Deploy"
+            steps {
+
+                echo "Deploy"
+
+            }
         
         }
     
